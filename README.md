@@ -2,7 +2,7 @@
 
 In this tutorial you will learn how to develop a game called Snake using a C# programming language without using any of the game's graphics engines.
 We will review everything you need to know to program this project step by step.
-- **_With this tutorial it even includes useful animations to help you understand everything! The code of this game is written in C#, but very well decoupled from the user interface and can be adapted to other programming languages ​​such as Java and C++._**
+With this tutorial it even includes useful animations to help you understand everything! The code of this game is written in C#, but very well decoupled from the user interface and can be adapted to other programming languages ​​such as Java and C++.
 - **_Have fun developing this game in C#!_**
 
 - **_En este tutorial aprenderás a cómo desarrollar un juego denominado Snake mediante un lenguaje de programación en C# sin utilizar ningún motor gráfico del juego._**
