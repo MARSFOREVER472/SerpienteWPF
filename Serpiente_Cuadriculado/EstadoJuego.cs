@@ -27,6 +27,23 @@ namespace Serpiente_Cuadriculado
             Columnas = columna; // COLUMNAS.
             Celdas = new ValorCelda[fila, columna]; // CELDAS.
             Direccion = DireccionesSerpiente.Derecha; // DIRECCION PREDETERMINADA
+
+            AnadirSerpiente(); // LLAMADO DEL MÉTODO PARA AGREGAR LA SERPIENTE DENTRO DEL TABLERO.
+        }
+
+        // CREAREMOS UNA SERPIENTE AQUÍ EN ESTA CLASE...
+
+        private void AnadirSerpiente()
+        {
+            int f = Filas / 2; // LA VARIABLE "f" SE CALCULA MEDIANTE LA MITAD POR CADA FILA...
+
+            // PARA LAS COLUMNAS UTILIZAREMOS EL CICLO "for"...
+
+            for (int c = 1; c <= 3; c++)
+            {
+                Celdas[f, c] = ValorCelda.Serpiente; // POR CADA CELDA ESTARÁ TODA LA SERPIENTE.
+                posicionesSerpiente.AddFirst(new Posicion(f, c)); // PRIMERO TOMAREMOS EN CUENTA LAS POSICIONES EN QUE SE ENCUENTRA AL AÑADIR LA SERPIENTE POR CELDAS DEL TABLERO.
+            }
         }
     }
 }
