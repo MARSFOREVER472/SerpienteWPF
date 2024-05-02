@@ -16,7 +16,7 @@ namespace Serpiente_Cuadriculado
 
         // POR CADA CELDA SE CONTENDRÁN LOS SIGUIENTES ELEMENTOS:
 
-        Normal,
+        Vacio,
         Serpiente,
         Comida,
         Afuera

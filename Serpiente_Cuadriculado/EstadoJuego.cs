@@ -45,5 +45,23 @@ namespace Serpiente_Cuadriculado
                 posicionesSerpiente.AddFirst(new Posicion(f, c)); // PRIMERO TOMAREMOS EN CUENTA LAS POSICIONES EN QUE SE ENCUENTRA AL AÑADIR LA SERPIENTE POR CELDAS DEL TABLERO.
             }
         }
+
+        // CREAREMOS UN NUEVO MÉTODO PARA QUE EL TABLERO ESTÉ DESPEJADO MEDIANTE POSICIONES VACÍAS...
+
+        private IEnumerable<Posicion> PosicionesVacias()
+        {
+            // POR CADA FILA Y COLUMNA DEL TABLERO CREAREMOS UN CICLO "for"...
+
+            for (int f = 0; f < Filas; f++) // PARA LAS FILAS...
+            {
+                for (int c = 0; c < Columnas; c++) // PARA LAS COLUMNAS...
+                {
+                    if (Celdas[f, c] == ValorCelda.Vacio) // SI LA CELDA ESTÁ VACÍA EN ESA POSICIÓN...
+                    {
+                        yield return new Posicion(f, c); // ENTONCES, LA POSICIÓN DE LA SERPIENTE POR DEFECTO VENDRÍA AQUÍ.
+                    }
+                }
+            }
+        }
     }
 }
