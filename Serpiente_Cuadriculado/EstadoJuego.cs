@@ -29,6 +29,7 @@ namespace Serpiente_Cuadriculado
             Direccion = DireccionesSerpiente.Derecha; // DIRECCION PREDETERMINADA
 
             AnadirSerpiente(); // LLAMADO DEL MÉTODO PARA AGREGAR LA SERPIENTE DENTRO DEL TABLERO.
+            AnadirComida(); // LLAMADO DEL MÉTODO PARA AGREGAR LA COMIDA AL TABLERO EN UNA CELDA VACÍA.
         }
 
         // CREAREMOS UNA SERPIENTE AQUÍ EN ESTA CLASE...
@@ -62,6 +63,23 @@ namespace Serpiente_Cuadriculado
                     }
                 }
             }
+        }
+
+        // CREAREMOS UN NUEVO MÉTODO PARA LA COMIDA DE LA SERPIENTE...
+
+        private void AnadirComida()
+        {
+            List<Posicion> vacio = new List<Posicion>(PosicionesVacias()); // LAS POSICIONES DEL TABLERO DEL JUEGO VAN A ESTAR VACÍAS MEDIANTE UNA LISTA.
+
+            // SI NO HAY UNA CIERTA CANTIDAD DE CELDAS VACÍAS...
+
+            if (vacio.Count == 0)
+            {
+                return; // DEVUELVE UN VALOR PREDETERMINADO POR DEFECTO EN CADA CELDA.
+            }
+
+            Posicion posicionActual = vacio[aleatorio.Next(vacio.Count)]; // LA POSICIÓN SE FIJARÁ EN UNA CELDA VACÍA ALEATORIAMENTE PARA LA COMIDA.
+            Celdas[posicionActual.Fila, posicionActual.Columna] = ValorCelda.Comida; // AQUÍ SE SITUARÁ LA COMIDA EN ESTA LÍNEA DE CÓDIGO.
         }
     }
 }
